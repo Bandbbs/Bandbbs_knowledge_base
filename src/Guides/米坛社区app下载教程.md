@@ -4,5 +4,4 @@
 ![](./Res/md_images_out/折腾米环、米表完整图文教程/米坛社区app下载方式/NO_STEP/0008_af38c41495.png)
 
 ## 网页版手机端下载方法
-![](./Res/md_images_out/折腾米环、米表完整图文教程/米坛社区app下载方式/NO_STEP/0009_cea5bff851.jpg)
-![](./Res/md_images_out/折腾米环、米表完整图文教程/米坛社区app下载方式/NO_STEP/0010_fd1063836c.jpg)
+![](./Res/md_images_out/折腾米环、米表完整图文教程/米坛社区app下载方式/NO_STEP/0009_cea5bff851.jpg)![](./Res/md_images_out/折腾米环、米表完整图文教程/米坛社区app下载方式/NO_STEP/0010_fd1063836c.jpg)
