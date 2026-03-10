@@ -32,6 +32,10 @@ export default defineConfig({
       }
     ],
     [
+      'meta',
+      { name: 'algolia-site-verification', content: '02116D6D8F200961' }
+    ],
+    [
       'script',
       {},
       `(function(c,l,a,r,i,t,y){
