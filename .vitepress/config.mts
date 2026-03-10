@@ -78,7 +78,7 @@ export default defineConfig({
       options: {
         appId: "R0W6PSVX9W",
         apiKey: "6368e34275dc1ebbcfbd79435921cf9d",
-        indexName: 'bandbbswiki'
+        indexName: 'wiki'
       },
     },
     editLink: {
