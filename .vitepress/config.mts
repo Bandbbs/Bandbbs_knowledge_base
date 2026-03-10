@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import siteIndex from "../src/index.json";
-// @ts-ignore
-import { generateMultiSidebar } from "./sidebar.mjs";
+import productWikiIndex from "../src/ProductWiki/index";
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,7 +23,18 @@ export default defineConfig({
         href: "https://cdn-font.hyperos.mi.com/font/css?family=MiSans:100,200,300,400,500,600:Chinese_Simplify,Latin&display=swap",
       },
     ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon.png"
+      }
+    ]
   ],
+  sitemap: {
+    hostname: "https://wiki.bandbbs.cn",
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: "知识库",
@@ -34,20 +45,14 @@ export default defineConfig({
     },
 
     // 自动生成多侧边栏 - 自动扫描 src 下的所有目录并为每个目录生成独立的侧边栏
-    sidebar: generateMultiSidebar("src", {
-      // 使用h1的标题作为侧边栏的标题
-      useTitleFromFileHeading: true,
-      // 使用文件夹的index.md
-      useFolderTitleFromIndexFile: true,
-      // 指向文件夹的链接
-      useFolderLinkFromIndexFile: true,
-      // 根据md文件的order进行排序
-      sortMenusByFrontmatterOrder: true,
-      // 排序之后将不是文件夹的放后面
-      sortFolderTo: "top",
-      // 菜单展开功能
-      collapsed: false,
-    }),
+    sidebar: {
+      "/ProductWiki/": [
+        {
+          text: "产品百科",
+          items: productWikiIndex
+        }
+      ],
+    },
 
     socialLinks: [
       {
@@ -55,5 +60,22 @@ export default defineConfig({
         link: "https://github.com/yizigezi/Bandbbs_knowledge_base",
       },
     ],
+    search: {
+      provider: "algolia",
+      options: {
+        appId: "R0W6PSVX9W",
+        apiKey: "df9b5ed790ee783af298d8afa4b9177a",
+        indexName: 'bandbbswiki'
+      },
+    },
+    editLink: {
+      pattern: "https://github.com/Bandbbs/Bandbbs_knowledge_base/edit/main/src/:path"
+    },
+    footer: {
+      copyright: "Copyright ©2019-2026 米坛社区. all right reserved."
+    },
+    lastUpdated: {
+      text: "上次更新",
+    },
   },
 });

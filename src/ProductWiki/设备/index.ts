@@ -1,7 +1,10 @@
+import xiaomi_index from "./Xiaomi/index";
+
 export default [
   {
     'text': 'Xiaomi',
-    items: []
+    items: xiaomi_index,
+    collapsed: true
   },
   {
     'text': 'REDMI',
