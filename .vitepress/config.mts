@@ -1,6 +1,10 @@
 import { defineConfig } from "vitepress";
 import siteIndex from "../src/index.json";
 import productWikiIndex from "../src/ProductWiki/index";
+import {
+  GitChangelog,
+  GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 
 // https://vitepress.dev/reference/site-config
@@ -91,5 +95,13 @@ export default defineConfig({
     lastUpdated: {
       text: "上次更新",
     },
+  },
+  vite: {
+    plugins: [
+      GitChangelog({
+        repoURL: () => 'https://github.com/Bandbbs/Bandbbs_knowledge_base',
+      }),
+      GitChangelogMarkdownSection(),
+    ],
   },
 });
